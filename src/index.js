@@ -44,10 +44,8 @@ client.on('messageCreate', async (message) => {
             },
         ],
     }).catch((error) => console.error('OpenAI Error:\n', error));
-    console.log('Before sending message');
     message.reply(response.choices[0].message.content);
-    console.log('After sending message');
-
+ 
 });
 
 client.login(process.env.TOKEN);
