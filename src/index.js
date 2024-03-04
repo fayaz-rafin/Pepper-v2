@@ -4,6 +4,7 @@ const { OpenAI } = require('openai');
 
 const client = new Client({
     intents: ['Guilds', 'GuildMessages', 'GuildMembers'],
+    
 });
 
 client.on('ready', () => {
@@ -47,5 +48,23 @@ client.on('messageCreate', async (message) => {
     message.reply(response.choices[0].message.content);
  
 });
+
+client.on('message', (message) => {
+    // Check if the message is from a bot or is not a command
+    if (message.author.bot || !message.content.startsWith('!')) {
+        return;
+    }
+
+    // Your bot's response logic here
+    message.reply('Hello! I am your Discord bot.');
+});
+*/
+client.on('message', (message) => {
+    console.log(`Received message: ${message.content}`);
+    // Your bot's response logic here
+    message.reply('Hello! I am your Discord bot.');
+});
+
+
 
 client.login(process.env.TOKEN);
