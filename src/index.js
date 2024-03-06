@@ -1,7 +1,6 @@
 require('dotenv/config');
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
 const { OpenAI } = require('openai');
-const { ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
 
