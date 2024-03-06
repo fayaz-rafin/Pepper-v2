@@ -56,7 +56,7 @@ client.on('message', (message) => {
     // Your bot's response logic here
     message.reply('Hello! I am your Discord bot.');
 });
-*/
+
 client.on('message', (message) => {
     console.log(`Received message: ${message.content}`);
     // Your bot's response logic here
